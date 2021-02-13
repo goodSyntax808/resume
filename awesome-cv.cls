@@ -579,6 +579,52 @@
   \end{tabular*}%
 }
 
+\newcommand*{\cventrytwopositions}[8]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+      \entrytitlestyle{#1} & \entrylocationstyle{#2} \\
+      \entrypositionstyle{#3} & \entrydatestyle{#4} \\
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\
+      \entrypositionstyle{#6} & \entrydatestyle{#7} \\
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#8}}
+  \end{tabular*}%
+}
+
+\newcommand*{\cventrythreepositions}[9]{%
+    \def\tempa{#1}%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \cventrythreepositionsrelay
+}
+
+\newcommand*{\cventrythreepositionsrelay}[2]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+      \entrytitlestyle{\tempa} & \entrylocationstyle{\tempb} \\
+      \entrypositionstyle{\tempc} & \entrydatestyle{\tempd} \\
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{\tempe}} \\
+      \entrypositionstyle{\tempf} & \entrydatestyle{\tempg} \\
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{\temph}} \\
+      \entrypositionstyle{\tempi} & \entrydatestyle{#1} \\
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#2}}
+  \end{tabular*}%
+}
+
+
+
+
+
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}
